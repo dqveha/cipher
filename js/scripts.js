@@ -21,11 +21,20 @@ function letterEquation() {
   console.log(newLetter + newReverseLetterString);
   return newLetter + newReverseLetterString;
 }
+function reverseAll() {
+  let finalReverse = "";
+
+  for (let i = lastOne.length-1; i>=0; i--) {
+    finalReverse += lastOne[i]
+  }
+  console.log(finalReverse);
+  return(finalReverse);
+}
 
 let firstSentence = prompt("Enter a sentence:");
 console.log(firstSentence);
 const reverseLetters = cap();
 const reverseLetterString = reverse();
 const newReverseLetterString = addTogether();
-letterEquation();
-
+const lastOne = letterEquation();
+reverseAll();
