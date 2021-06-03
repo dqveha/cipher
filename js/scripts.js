@@ -1,24 +1,24 @@
 function cap() {
   const lastLetter = firstSentence.charAt(firstSentence.length-1).toUpperCase();
   const firstLetter = firstSentence.charAt(0).toUpperCase();
-  console.log(firstLetter + lastLetter);
+  // console.log(firstLetter + lastLetter);
   return firstLetter + lastLetter;
 }
 function reverse() {
   let reverse1 = reverseLetters.charAt(reverseLetters.length-1);
   let reverse2 = reverseLetters.charAt(0);
-  console.log(reverse1 + reverse2);
+  // console.log(reverse1 + reverse2);
   return reverse1 + reverse2;
 }
 function addTogether() {
-  console.log(firstSentence + reverseLetterString);
+  // console.log(firstSentence + reverseLetterString);
   return firstSentence + reverseLetterString;
 }
 function letterEquation() {
   const countSentence = parseInt(firstSentence.length);
   const divide = countSentence / 2;
   const newLetter = firstSentence.charAt(divide);
-  console.log(newLetter + newReverseLetterString);
+  // console.log(newLetter + newReverseLetterString);
   return newLetter + newReverseLetterString;
 }
 function reverseAll() {
@@ -27,7 +27,7 @@ function reverseAll() {
   for (let i = lastOne.length-1; i>=0; i--) {
     finalReverse += lastOne[i]
   }
-  console.log(finalReverse);
+  // console.log(finalReverse);
   return(finalReverse);
 }
 
@@ -48,8 +48,8 @@ $(document).ready(function() {
   // const lastOne = letterEquation();
   // const ultimateOne = reverseAll();
 
-  $("#sentence1").text(firstSentence);
-  $("#sentence2").text(ultimateOne);
+  $("#sentence1").text(firstSentence).hide();
+  $("#sentence2").text(ultimateOne).hide();
 
   $("#originalWord").click(function() {
     $("#sentence2").hide();
