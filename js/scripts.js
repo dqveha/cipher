@@ -14,10 +14,18 @@ function addTogether() {
   console.log(firstSentence + reverseLetterString);
   return firstSentence + reverseLetterString;
 }
+function letterEquation() {
+  const countSentence = parseInt(firstSentence.length);
+  const divide = countSentence / 2;
+  const newLetter = firstSentence.charAt(divide);
+  console.log(newLetter + newReverseLetterString);
+  return newLetter + newReverseLetterString;
+}
 
 let firstSentence = prompt("Enter a sentence:");
 console.log(firstSentence);
 const reverseLetters = cap();
 const reverseLetterString = reverse();
-addTogether();
+const newReverseLetterString = addTogether();
+letterEquation();
 
