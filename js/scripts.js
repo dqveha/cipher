@@ -32,9 +32,31 @@ function reverseAll() {
 }
 
 let firstSentence = prompt("Enter a sentence:");
-console.log(firstSentence);
-const reverseLetters = cap();
-const reverseLetterString = reverse();
-const newReverseLetterString = addTogether();
-const lastOne = letterEquation();
-reverseAll();
+  const reverseLetters = cap();
+  const reverseLetterString = reverse();
+  const newReverseLetterString = addTogether();
+  const lastOne = letterEquation();
+  const ultimateOne = reverseAll();
+
+$(document).ready(function() {
+
+  // let firstSentence = prompt("Enter a sentence:");
+  // console.log(firstSentence);
+  // const reverseLetters = cap();
+  // const reverseLetterString = reverse();
+  // const newReverseLetterString = addTogether();
+  // const lastOne = letterEquation();
+  // const ultimateOne = reverseAll();
+
+  $("#sentence1").text(firstSentence);
+  $("#sentence2").text(ultimateOne);
+
+  $("#originalWord").click(function() {
+    $("#sentence2").hide();
+    $("#sentence1").toggle();
+  });
+  $("#reversedWord").click(function() {
+    $("#sentence1").hide();
+    $("#sentence2").toggle();
+  });
+});
